@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", serif;
+}
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: rgb(18, 7, 34);
+  color: white;
+}
+main > div {
+  width: 1000px;
+  height: 600px;
+  /* background-color: red; */
+}
+.title {
+  font-size: 40px;
+  font-weight: 800;
+  text-align: center;
+}
+.input {
+  width: 100%;
+  margin-top: 10px;
+}
+.input > input {
+  /* margin-top: 10px; */
+  width: 89%;
+  height: 46px;
+  outline: none;
+  border: 2px solid rgb(32, 6, 72);
+  padding: 8px;
+  border-radius: 8px;
+  margin-right: 8px;
+  font-size: 16px;
+  background-color: rgb(18, 7, 34);
+  color: wheat;
+  font-family: "Open Sans", serif;
+  stroke: none;
+  /* box-shadow: 0px 0px 5px rgb(50, 50, 50); */
+  transition: all 0.3s ease-in;
+}
+.input > input:focus {
+  border: 2px solid blueviolet;
+}
+.input > button {
+  width: 9%;
+  cursor: pointer;
+  height: 46px;
+  border-radius: 6px;
+  outline: none;
+  color: rgb(180, 134, 248);
+  background-color: transparent;
+  border: 2px solid rgb(32, 6, 72);
+  font-size: 18px;
+  padding: 2px;
+  transition: all 0.3s ease-in;
+}
+.input > button:hover {
+  box-shadow: 0px 0px 5px rgb(50, 50, 50);
+  border: 2px solid blueviolet;
+}
+.tasks {
+  width: 100%;
+  height: 77%;
+  margin-top: 14px;
+  transition: all 0.4s ease;
+  /* background-color: aqua; */
+}
+.hidden {
+  visibility: hidden !important;
+  width: 0px !important;
+  height: 0px !important;
+  opacity: 0 !important ;
+  display: none !important;
+  pointer-events: none !important;
+}
+.tasks > div {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  height: 55px;
+  border-radius: 6px;
+  padding: 6px 12px;
+  /* background-color: aqua; */
+  box-shadow: 5px 10px 15px -3px rgba(0, 0, 0, 0.75),
+    -20px -14px 20px -13px rgba(87, 12, 87, 1);
+  margin-top: 30px;
+  transition: all 0.3s ease;
+}
+.tasks > div:hover {
+  scale: 1.04;
+  border-right: 2px solid blueviolet;
+  border-left: 2px solid blueviolet;
+}
+.tasks > div > p {
+  width: 85%;
+  font-size: 18px;
+}
+.tasks > div > div {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.tasks > div > div > svg {
+  transition: all 0.4s ease;
+  width: 24px;
+  height: 24px;
+  margin: 10px;
+  cursor: pointer;
+  pointer-events: all;
+}
+.comp {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-weight: 800;
+  text-align: center;
+  display: flex;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.645);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.done {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.popup {
+  width: 800px;
+  height: 200px;
+  position: absolute;
+  background-color: rgb(18, 7, 34);
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.489);
+  transition: all 0.3s ease;
+}
